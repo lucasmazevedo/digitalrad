@@ -1,0 +1,40 @@
+<%= form_for([:admin, clinic]) do |f| %>
+  <% if clinic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(clinic.errors.count, "error") %> prohibited this clinic from being saved:</h2>
+
+      <ul>
+      <% clinic.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control", placehold: "Nome do Caso" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control", placehold: "Título" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description, class: "form-control", placehold: "Conteúdo" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :photos %>
+    <%= f.file_field :photos, class: "form-control", multiple: true %>
+  </div>
+
+ <div class="form-group">
+    <%= f.label :status %>
+    <%= f.check_box :status %>
+  </div>
+
+  <%= f.submit btn, class: "btn btn-primary" %>
+<% end %>

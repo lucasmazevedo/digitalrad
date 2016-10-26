@@ -15,16 +15,17 @@
 				<div class="sec-title">
 					<p>Ao invés de manter um corpo clínico, pague apenas por laudos emitidos e otimize o fluxo de exames de maneira simples. Somos formados por uma equipe médica experiente e garantimos a excelência durante todo o processo. Seus arquivos de exames são ilimitados e ficam armazenados para sempre.</p>
 				</div>
-				
+				<% @services.each do |service| -%>
 				<div class="single-client-box">
 					<div class="icon-box">
-						<%= image_tag 'client-box/1.jpg' -%>
+						<%= image_tag service.image.services -%>
 					</div>
 					<div class="content">
-						<h3>Emissão de laudos radiológicos à distância</h3>
-						<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam susceit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure</p>
+						<h3><%= service.title -%></h3>
+						<p><%= service.description -%></p>
 					</div>
 				</div>
+				<% end -%>
 				<div class="single-client-box">
 					<div class="icon-box">
 						<%= image_tag 'client-box/2.jpg' -%>

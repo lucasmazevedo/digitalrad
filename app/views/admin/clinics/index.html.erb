@@ -1,0 +1,44 @@
+      <h1 class="page-header">Casos Clínicos <%= link_to 'Cadastrar Novo', new_admin_clinic_path, class: "btn btn-primary pull-right" %></h1>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Lista </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Titulo</th>
+                                            <th>Descrição</th>
+                                            <th>Imagem</th>
+                                            <th>Status</th>
+                                            <th>Ações</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% @clinics.each do |clinic| %>
+                                          <tr>
+                                            <td><%= clinic.id %></td>
+                                            <td><%= clinic.title %></td>
+                                            <td><%= clinic.description %></td>
+                                            <td><%= image_tag clinic.photos[0], width: "50px" if not clinic.photos.blank? %></td>
+                                            <td><%= clinic.statuses %></td>
+                                            <td>
+                                              <%= link_to 'Exibir', [:admin, clinic], class: "btn btn-info btn-sm" %>
+                                              <%= link_to 'Editar', edit_admin_clinic_path(clinic), class: "btn btn-warning btn-sm" %>
+                                              <%= link_to 'Excluir', [:admin, clinic], class: "btn btn-danger btn-sm", method: :delete, data: { confirm: 'Deseja deletar o registro?' } %>
+                                            </td>
+                                          </tr>
+                                        <% end %>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+            </div>
+    

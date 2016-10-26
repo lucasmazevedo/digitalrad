@@ -138,11 +138,9 @@
 						<h2><span>SEUS DESAFIOS, NOSSAS SOLUÇÕES</span></h2>
 						<p>A Digital Rad oferece os melhores e mais avançados serviços de laudos a distância, proporcionando verdadeiros diferenciais aos seus resultados de ressonância magnética e tomografia computadorizada.</p>
 						<ul class="bulleted-list">
-							<li><i class="fa fa-arrow-circle-right"></i> Cobertura de férias de radiologistas locais</li>
-							<li><i class="fa fa-arrow-circle-right"></i> Cobertura de variações esporádicas no volume de exames</li>
-							<li><i class="fa fa-arrow-circle-right"></i> Análise de exames complexos</li>
-							<li><i class="fa fa-arrow-circle-right"></i> Segunda opinião</li>
-							<li><i class="fa fa-arrow-circle-right"></i> Terceirização da radiologia (total ou parcial)</li>
+							<% @services.each do |service| -%>
+							<li><i class="fa fa-arrow-circle-right"></i> <%= service.title -%></li>
+							<% end -%>
 						</ul>
 					</div>
 				</div>
@@ -191,44 +189,21 @@
 					<h2><span>Alguns de Nossos Serviços</span></h2>
 				</div>
 				<div class="accrodion-grp" data-grp-name="faq-accrodion">
-					<div class="accrodion active">
-						<div class="accrodion-title">
-							<h4>LAUDOS A DISTÂNCIA</h4>
-						</div>
-						<div class="accrodion-content">
-							<div class="img-caption">
-								<div class="content-box">
-									<p>Com uma completa infraestrutura, a equipe de radiologistas da Digital Rad desenvolve diariamente um trabalho em conjunto. Essa interação entre médicos de diferentes especialidades resulta em laudos com análises criteriosas e de alto valor agregado para cada cliente.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="accrodion ">
-						<div class="accrodion-title">
-							<h4>LAUDOS CARDÍACOS</h4>
-						</div>
-						<div class="accrodion-content">
-							<div class="img-caption">
-								<div class="content-box">
-									<p>A Ressonância Cardíaca tem apresentado um papel fundamental no diagnóstico das miocardiopatias. A Angiotomografia Cardíaca destaca-se pela precisão no diagnóstico da doença arterial coronariana obstrutiva.</p>
-									<p>	Para os exames desta especialidade, nossos médicos possuem grande experiência para uma análise completa de cada estrutura cardíaca, elaboração das medidas e documentação, além de todo treinamento necessário para o desenvolvimento e a implementação dos exames.</p>
-								</div>
-							</div>
-						</div>
-					</div>
+
+				<% @services.each do |service| -%>
 					<div class="accrodion">
 						<div class="accrodion-title">
-							<h4>LAUDOS DE MAMA</h4>
+							<h4><%= service.title -%></h4>
 						</div>
 						<div class="accrodion-content">
 							<div class="img-caption">
 								<div class="content-box">
-									<p>A RM das mamas é um exame de altíssima sensibilidade que permite o diagnóstico precoce do câncer de mama e a análise de lesões que, em alguns casos, não são identificadas nos exames de mamografia ou ultrassonografia.</p>
-									<p>Para os exames desta especialidade, nossos médicos possuem grande experiência para análise de pequenos focos de lesão e um diagnóstico determinante no pré e pós-operatórios, trazendo um grande diferencial para o desenvolvimento e a implementação deste tipo de exame.</p>
+									<p><%= service.description -%></p>
 								</div>
 							</div>
 						</div>
 					</div>
+				<% end -%>
 				</div>
 			</div>
 			<div class="col-md-4">
@@ -236,37 +211,20 @@
 					<h2><span>Depoimentos</span></h2>
 				</div>
 				<div class="testimonial-content-box owl-carousel owl-theme">
+				<% @testemonials.each do |testemonial| -%>
 					<div class="item">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisno strud exercitation ullamco laboris nisi ut aliquip ex ea commodo.  incididunt ut labore et dolore magna aliqu.</p>
-						<span class="name">- Cliente 1</span>
+						<p><%= testemonial.description -%></p>
+						<span class="name">- <%= testemonial.name -%></span>
 					</div>
-					<div class="item">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisno strud exercitation ullamco laboris nisi ut aliquip ex ea commodo.  incididunt ut labore et dolore magna aliqu.</p>
-						<span class="name">- Cliente 2</span>
-					</div>
-					<div class="item">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisno strud exercitation ullamco laboris nisi ut aliquip ex ea commodo.  incididunt ut labore et dolore magna aliqu.</p>
-						<span class="name">- Cliente 3</span>
-					</div>
-					<div class="item">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisno strud exercitation ullamco laboris nisi ut aliquip ex ea commodo.  incididunt ut labore et dolore magna aliqu.</p>
-						<span class="name">- Cliente 4</span>
-					</div>
+					<% end -%>
 
 				</div>
 				<div class="testimonail-thumbnail-box owl-carousel owl-theme">
+				<% @testemonials.each do |testemonial| -%>
 					<div class="item">
-						<%= image_tag "testimonials/1.png" -%>
+						<%= image_tag testemonial.avatar.testemonials -%>
 					</div>
-					<div class="item">
-						<%= image_tag "testimonials/2.png" -%>
-					</div>
-					<div class="item">
-						<%= image_tag "testimonials/3.png" -%>
-					</div>
-					<div class="item">
-						<%= image_tag "testimonials/4.png" -%>
-					</div>
+				<% end -%>
 				</div>
 			</div>
 		</div>
@@ -292,9 +250,10 @@
 				</div>
 			</div>
 			<div class="col-lg-8 col-md-12">
+			<% @news.each do |article| -%>
 				<div class="single-blog-post img-cap-effect">
 					<div class="img-box">
-						<%= image_tag "blog/1.jpg" -%>
+						<%= image_tag article.picture.news -%>
 						<div class="img-caption">
 							<div class="box-holder">
 								<ul>
@@ -304,38 +263,16 @@
 						</div>
 					</div>
 					<div class="content-box">
-						<a href="#"><h3>Como reduzir custos em clínicas e hospitais</h3></a>
+						<a href="#"><h3><%= article.title -%></h3></a>
 						<ul class="meta">
-							<li><a href="#">Digital Blog</a></li>
-							<li><a href="#">10 Set</a></li>
-							<li><a href="#">6 Comentários</a></li>
+							<li><a href="#"><%= article.category.name -%></a></li>
+							<li><a href="#"><%= I18n.l(article.created_at, format: :long) -%></a></li>
 						</ul>
-						<p>Ded do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nstrud exercitation ullamco laboris nisi ut aliquip</p>
+						<p><%= truncate(article.description, length: 170, ) -%></p>
 						<a href="#">Leia Mais +</a>
 					</div>
 				</div>
-				<div class="single-blog-post img-cap-effect">
-					<div class="img-box">
-						<%= image_tag "blog/2.jpg" -%>
-						<div class="img-caption">
-							<div class="box-holder">
-								<ul>
-									<li><a href="#"><i class="fa fa-link"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="content-box">
-						<a href="#"><h3>5 dicas para organizar a recepção do seu centro de diagnóstico</h3></a>
-						<ul class="meta">
-							<li><a href="#">Digital Blog</a></li>
-							<li><a href="#">10 Set</a></li>
-							<li><a href="#">6 Comentários</a></li>
-						</ul>
-						<p>Ded do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nstrud exercitation ullamco laboris nisi ut aliquip</p>
-						<a href="#">Leia Mais +</a>
-					</div>
-				</div>
+				<% end -%>
 			</div>
 		</div>
 	</div>

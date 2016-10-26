@@ -87,51 +87,24 @@
 <section class="testimonials-carousel">
 	<div class="container">
 		<div class="owl-carousel owl-theme">
+		<% @testemonials.each do |testemonial| -%>
 			<div class="item">
 				<div class="single-testimonial-carousel">
 					<div class="img-box">
 						<div class="inner">
-							<%= image_tag 'testimonials/1.png'-%>
+							<%= image_tag testemonial.avatar.testemonials-%>
 						</div>
 					</div>
 					<div class="content-box">
-						<p><span class="quote">“</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nstrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat</p>
+						<p><span class="quote">“</span><%= testemonial.description -%></p>
 						<p class="name text-right">
-							<span>- Michale John</span> <br> Spsum is simply dummy
+							<span>- <%= testemonial.name -%></span> <br> <%= testemonial.organization -%>
 						</p>
 					</div>
 				</div>
 			</div>
-			<div class="item">
-				<div class="single-testimonial-carousel">
-					<div class="img-box">
-						<div class="inner">
-							<%= image_tag 'testimonials/2.png'-%>
-						</div>
-					</div>
-					<div class="content-box">
-						<p><span class="quote">“</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nstrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat</p>
-						<p class="name text-right">
-							<span>- Michale John</span> <br> Spsum is simply dummy
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				<div class="single-testimonial-carousel">
-					<div class="img-box">
-						<div class="inner">
-							<%= image_tag 'testimonials/3.png'-%>
-						</div>
-					</div>
-					<div class="content-box">
-						<p><span class="quote">“</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nstrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat</p>
-						<p class="name text-right">
-							<span>- Michale John</span> <br> Spsum is simply dummy
-						</p>
-					</div>
-				</div>
-			</div>
+			<% end -%>
+			
 		</div>
 	</div>
 </section>

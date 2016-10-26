@@ -1,0 +1,1 @@
+json.partial! "testemonials/testemonial", testemonial: @testemonial

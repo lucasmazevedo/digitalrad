@@ -1,0 +1,53 @@
+<h1 class="page-header">Id: # <%= @testemonial.id -%></h1>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Informações</div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                  
+                                  <div class="form-group">
+                                    <label>Nome</label>
+                                    <p class="form-control-static"><%= @testemonial.name %></p>
+                                  </div>
+
+                                  <div class="form-group">
+                                    <label>Organização/Empresa</label>
+                                    <p class="form-control-static"><%= @testemonial.organization %></p>
+                                  </div>
+
+                                  <div class="form-group">
+                                    <label>Texto</label>
+                                    <p class="form-control-static"><%= @testemonial.description %></p>
+                                  </div>
+
+                                  <div class="form-group">
+                                    <label>Status</label>
+                                    <p class="form-control-static"><%= @testemonial.statuses %></p>
+                                  </div>
+                                
+                                </div>
+
+                                <div class="col-lg-4">
+                                   <div class="form-group">
+                                    <label>Imagem</label>
+
+                                    <p class="form-control-static"><%= image_tag @testemonial.avatar, width: "150px" -%></p>
+                                  </div>
+                                </div>
+                             
+                            </div>
+                            
+                        </div>
+                        <div class="panel-footer">
+            <%= link_to '<i class="fa fa-chevron-left"></i> Voltar'.html_safe, admin_testemonials_path, class: "btn btn-default" %>
+            <%= link_to '<i class="fa fa-pencil"></i> Editar'.html_safe, edit_admin_testemonial_path(@testemonial), class: "btn btn-default" %>
+                          
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
