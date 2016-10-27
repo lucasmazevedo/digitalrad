@@ -21165,3 +21165,295 @@ Using devise 4.2.0
  DEBUG [a1395a5f] Finished in 0.288 seconds with exit status 0 (successful).
   INFO [2b5f34f1] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as deploy@107.170.35.158
  DEBUG [2b5f34f1] Command: cd /home/deploy/digitalrad/releases/20161027045318 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-27 01:56:26 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [23b80224] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as deploy@107.170.35.158
+ DEBUG [23b80224] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [23b80224] Finished in 2.018 seconds with exit status 0 (successful).
+  INFO [30052964] Running /usr/bin/env mkdir -p /tmp as deploy@107.170.35.158
+ DEBUG [30052964] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [30052964] Finished in 1.914 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-digitalrad-production-lucasazevedo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-digitalrad-production-lucasazevedo.sh 100.0%
+  INFO [602c17d7] Running /usr/bin/env chmod 700 /tmp/git-ssh-digitalrad-production-lucasazevedo.sh as deploy@107.170.35.158
+ DEBUG [602c17d7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-digitalrad-production-lucasazevedo.sh )
+  INFO [602c17d7] Finished in 0.285 seconds with exit status 0 (successful).
+  INFO [4c3a8303] Running /usr/bin/env git ls-remote --heads git@github.com:lucasmazevedo/digitalrad.git as deploy@107.170.35.158
+ DEBUG [4c3a8303] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-digitalrad-production-lucasazevedo.sh" ; /usr/bin/env git ls-remote --heads git@github.com:lucasmazevedo/digitalrad.git )
+ DEBUG [4c3a8303] 	b6d38fe69cf3f51eb62b265faad358652b9462d0	refs/heads/master
+  INFO [4c3a8303] Finished in 0.825 seconds with exit status 0 (successful).
+  INFO [2141183e] Running /usr/bin/env mkdir -p /home/deploy/digitalrad/shared /home/deploy/digitalrad/releases as deploy@107.170.35.158
+ DEBUG [2141183e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deploy/digitalrad/shared /home/deploy/digitalrad/releases )
+  INFO [2141183e] Finished in 0.294 seconds with exit status 0 (successful).
+  INFO [2addf716] Running /usr/bin/env mkdir -p /home/deploy/digitalrad/shared/bin /home/deploy/digitalrad/shared/log /home/deploy/digitalrad/shared/tmp/pids /home/deploy/digitalrad/shared/tmp/cache /home/deploy/digitalrad/shared/tmp/sockets /home/deploy/digitalrad/shared/vendor/bundle /home/deploy/digitalrad/shared/public/uploads /home/deploy/digitalrad/shared/public/assets as deploy@107.170.35.158
+ DEBUG [2addf716] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deploy/digitalrad/shared/bin /home/deploy/digitalrad/shared/log /home/deploy/digitalrad/shared/tmp/pids /home/deploy/digitalrad/shared/tmp/cache /home/deploy/digitalrad/shared/tmp/sockets /home/deploy/digitalrad/shared/vendor/bundle /home/deploy/digitalrad/shared/public/uploads /home/deploy/digitalrad/shared/public/assets )
+  INFO [2addf716] Finished in 0.293 seconds with exit status 0 (successful).
+  INFO [2957daca] Running /usr/bin/env mkdir -p /home/deploy/digitalrad/shared/config as deploy@107.170.35.158
+ DEBUG [2957daca] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deploy/digitalrad/shared/config )
+  INFO [2957daca] Finished in 0.297 seconds with exit status 0 (successful).
+ DEBUG [e4719463] Running [ -f /home/deploy/digitalrad/shared/config/database.yml ] as deploy@107.170.35.158
+ DEBUG [e4719463] Command: [ -f /home/deploy/digitalrad/shared/config/database.yml ]
+ DEBUG [e4719463] Finished in 0.297 seconds with exit status 0 (successful).
+ DEBUG [3a9ef12e] Running [ -f /home/deploy/digitalrad/shared/config/secrets.yml ] as deploy@107.170.35.158
+ DEBUG [3a9ef12e] Command: [ -f /home/deploy/digitalrad/shared/config/secrets.yml ]
+ DEBUG [3a9ef12e] Finished in 0.288 seconds with exit status 0 (successful).
+ DEBUG [d1220dfe] Running [ -f /home/deploy/digitalrad/shared/config/secrets.yml ] as deploy@107.170.35.158
+ DEBUG [d1220dfe] Command: [ -f /home/deploy/digitalrad/shared/config/secrets.yml ]
+ DEBUG [d1220dfe] Finished in 0.301 seconds with exit status 0 (successful).
+ DEBUG [8342a609] Running [ -f /home/deploy/digitalrad/current/REVISION ] as deploy@107.170.35.158
+ DEBUG [8342a609] Command: [ -f /home/deploy/digitalrad/current/REVISION ]
+ DEBUG [8342a609] Finished in 0.289 seconds with exit status 0 (successful).
+ DEBUG [a26168d1] Running /usr/bin/env cat /home/deploy/digitalrad/current/REVISION 2>/dev/null as deploy@107.170.35.158
+ DEBUG [a26168d1] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cat /home/deploy/digitalrad/current/REVISION 2>/dev/null )
+ DEBUG [a26168d1] 	a7c1a5f5b71375cb297926ed24baf97ab3c9fb45
+ DEBUG [a26168d1] Finished in 0.290 seconds with exit status 0 (successful).
+ DEBUG [a5df9fc6] Running [ -f /home/deploy/digitalrad/repo/HEAD ] as deploy@107.170.35.158
+ DEBUG [a5df9fc6] Command: [ -f /home/deploy/digitalrad/repo/HEAD ]
+ DEBUG [a5df9fc6] Finished in 0.283 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/digitalrad/repo
+ DEBUG [e5979dc7] Running if test ! -d /home/deploy/digitalrad/repo; then echo "Directory does not exist '/home/deploy/digitalrad/repo'" 1>&2; false; fi as deploy@107.170.35.158
+ DEBUG [e5979dc7] Command: if test ! -d /home/deploy/digitalrad/repo; then echo "Directory does not exist '/home/deploy/digitalrad/repo'" 1>&2; false; fi
+ DEBUG [e5979dc7] Finished in 0.293 seconds with exit status 0 (successful).
+  INFO [71c50a2f] Running /usr/bin/env git remote update --prune as deploy@107.170.35.158
+ DEBUG [71c50a2f] Command: cd /home/deploy/digitalrad/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-digitalrad-production-lucasazevedo.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [71c50a2f] 	Fetching origin
+ DEBUG [71c50a2f] 	From github.com:lucasmazevedo/digitalrad
+ DEBUG [71c50a2f] 	   a7c1a5f..b6d38fe  master     -> master
+  INFO [71c50a2f] Finished in 1.159 seconds with exit status 0 (successful).
+ DEBUG [9a41bac8] Running if test ! -d /home/deploy/digitalrad/repo; then echo "Directory does not exist '/home/deploy/digitalrad/repo'" 1>&2; false; fi as deploy@107.170.35.158
+ DEBUG [9a41bac8] Command: if test ! -d /home/deploy/digitalrad/repo; then echo "Directory does not exist '/home/deploy/digitalrad/repo'" 1>&2; false; fi
+ DEBUG [9a41bac8] Finished in 0.288 seconds with exit status 0 (successful).
+  INFO [10562ba5] Running /usr/bin/env mkdir -p /home/deploy/digitalrad/releases/20161027045634 as deploy@107.170.35.158
+ DEBUG [10562ba5] Command: cd /home/deploy/digitalrad/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-digitalrad-production-lucasazevedo.sh" ; /usr/bin/env mkdir -p /home/deploy/digitalrad/releases/20161027045634 )
+  INFO [10562ba5] Finished in 0.295 seconds with exit status 0 (successful).
+  INFO [6e3c2f9f] Running /usr/bin/env git archive master | tar -x -f - -C /home/deploy/digitalrad/releases/20161027045634 as deploy@107.170.35.158
+ DEBUG [6e3c2f9f] Command: cd /home/deploy/digitalrad/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-digitalrad-production-lucasazevedo.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/deploy/digitalrad/releases/20161027045634 )
+  INFO [6e3c2f9f] Finished in 1.693 seconds with exit status 0 (successful).
+ DEBUG [731489d7] Running if test ! -d /home/deploy/digitalrad/repo; then echo "Directory does not exist '/home/deploy/digitalrad/repo'" 1>&2; false; fi as deploy@107.170.35.158
+ DEBUG [731489d7] Command: if test ! -d /home/deploy/digitalrad/repo; then echo "Directory does not exist '/home/deploy/digitalrad/repo'" 1>&2; false; fi
+ DEBUG [731489d7] Finished in 0.281 seconds with exit status 0 (successful).
+ DEBUG [a67f174d] Running /usr/bin/env git rev-list --max-count=1 master as deploy@107.170.35.158
+ DEBUG [a67f174d] Command: cd /home/deploy/digitalrad/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-digitalrad-production-lucasazevedo.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [a67f174d] 	b6d38fe69cf3f51eb62b265faad358652b9462d0
+ DEBUG [a67f174d] Finished in 0.296 seconds with exit status 0 (successful).
+ DEBUG [1ff9b3a2] Running if test ! -d /home/deploy/digitalrad/releases/20161027045634; then echo "Directory does not exist '/home/deploy/digitalrad/releases/20161027045634'" 1>&2; false; fi as deploy@107.170.35.158
+ DEBUG [1ff9b3a2] Command: if test ! -d /home/deploy/digitalrad/releases/20161027045634; then echo "Directory does not exist '/home/deploy/digitalrad/releases/20161027045634'" 1>&2; false; fi
+ DEBUG [1ff9b3a2] Finished in 0.289 seconds with exit status 0 (successful).
+  INFO [9d1d8c97] Running /usr/bin/env echo "b6d38fe69cf3f51eb62b265faad358652b9462d0" >> REVISION as deploy@107.170.35.158
+ DEBUG [9d1d8c97] Command: cd /home/deploy/digitalrad/releases/20161027045634 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "b6d38fe69cf3f51eb62b265faad358652b9462d0" >> REVISION )
+  INFO [9d1d8c97] Finished in 0.293 seconds with exit status 0 (successful).
+  INFO [996952e0] Running /usr/bin/env mkdir -p /home/deploy/digitalrad/releases/20161027045634/config as deploy@107.170.35.158
+ DEBUG [996952e0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deploy/digitalrad/releases/20161027045634/config )
+  INFO [996952e0] Finished in 0.288 seconds with exit status 0 (successful).
+ DEBUG [a18e52b2] Running [ -L /home/deploy/digitalrad/releases/20161027045634/config/database.yml ] as deploy@107.170.35.158
+ DEBUG [a18e52b2] Command: [ -L /home/deploy/digitalrad/releases/20161027045634/config/database.yml ]
+ DEBUG [a18e52b2] Finished in 0.286 seconds with exit status 1 (failed).
+ DEBUG [996e12c8] Running [ -f /home/deploy/digitalrad/releases/20161027045634/config/database.yml ] as deploy@107.170.35.158
+ DEBUG [996e12c8] Command: [ -f /home/deploy/digitalrad/releases/20161027045634/config/database.yml ]
+ DEBUG [996e12c8] Finished in 0.290 seconds with exit status 1 (failed).
+  INFO [3c9b9d02] Running /usr/bin/env ln -s /home/deploy/digitalrad/shared/config/database.yml /home/deploy/digitalrad/releases/20161027045634/config/database.yml as deploy@107.170.35.158
+ DEBUG [3c9b9d02] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deploy/digitalrad/shared/config/database.yml /home/deploy/digitalrad/releases/20161027045634/config/database.yml )
+  INFO [3c9b9d02] Finished in 0.300 seconds with exit status 0 (successful).
+ DEBUG [b987ffa9] Running [ -L /home/deploy/digitalrad/releases/20161027045634/config/secrets.yml ] as deploy@107.170.35.158
+ DEBUG [b987ffa9] Command: [ -L /home/deploy/digitalrad/releases/20161027045634/config/secrets.yml ]
+ DEBUG [b987ffa9] Finished in 0.286 seconds with exit status 1 (failed).
+ DEBUG [13fe86ba] Running [ -f /home/deploy/digitalrad/releases/20161027045634/config/secrets.yml ] as deploy@107.170.35.158
+ DEBUG [13fe86ba] Command: [ -f /home/deploy/digitalrad/releases/20161027045634/config/secrets.yml ]
+ DEBUG [13fe86ba] Finished in 0.298 seconds with exit status 1 (failed).
+  INFO [85039980] Running /usr/bin/env ln -s /home/deploy/digitalrad/shared/config/secrets.yml /home/deploy/digitalrad/releases/20161027045634/config/secrets.yml as deploy@107.170.35.158
+ DEBUG [85039980] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deploy/digitalrad/shared/config/secrets.yml /home/deploy/digitalrad/releases/20161027045634/config/secrets.yml )
+  INFO [85039980] Finished in 0.291 seconds with exit status 0 (successful).
+ DEBUG [f9bd97a5] Running [ -L /home/deploy/digitalrad/releases/20161027045634/config/secrets.yml ] as deploy@107.170.35.158
+ DEBUG [f9bd97a5] Command: [ -L /home/deploy/digitalrad/releases/20161027045634/config/secrets.yml ]
+ DEBUG [f9bd97a5] Finished in 0.287 seconds with exit status 0 (successful).
+  INFO [fe042ed3] Running /usr/bin/env mkdir -p /home/deploy/digitalrad/releases/20161027045634 /home/deploy/digitalrad/releases/20161027045634/tmp /home/deploy/digitalrad/releases/20161027045634/vendor /home/deploy/digitalrad/releases/20161027045634/public as deploy@107.170.35.158
+ DEBUG [fe042ed3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /home/deploy/digitalrad/releases/20161027045634 /home/deploy/digitalrad/releases/20161027045634/tmp /home/deploy/digitalrad/releases/20161027045634/vendor /home/deploy/digitalrad/releases/20161027045634/public )
+  INFO [fe042ed3] Finished in 0.299 seconds with exit status 0 (successful).
+ DEBUG [88c1c28f] Running [ -L /home/deploy/digitalrad/releases/20161027045634/bin ] as deploy@107.170.35.158
+ DEBUG [88c1c28f] Command: [ -L /home/deploy/digitalrad/releases/20161027045634/bin ]
+ DEBUG [88c1c28f] Finished in 0.282 seconds with exit status 1 (failed).
+ DEBUG [e1532bd5] Running [ -d /home/deploy/digitalrad/releases/20161027045634/bin ] as deploy@107.170.35.158
+ DEBUG [e1532bd5] Command: [ -d /home/deploy/digitalrad/releases/20161027045634/bin ]
+ DEBUG [e1532bd5] Finished in 0.288 seconds with exit status 0 (successful).
+  INFO [a1a73994] Running /usr/bin/env rm -rf /home/deploy/digitalrad/releases/20161027045634/bin as deploy@107.170.35.158
+ DEBUG [a1a73994] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /home/deploy/digitalrad/releases/20161027045634/bin )
+  INFO [a1a73994] Finished in 0.306 seconds with exit status 0 (successful).
+  INFO [1894927a] Running /usr/bin/env ln -s /home/deploy/digitalrad/shared/bin /home/deploy/digitalrad/releases/20161027045634/bin as deploy@107.170.35.158
+ DEBUG [1894927a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deploy/digitalrad/shared/bin /home/deploy/digitalrad/releases/20161027045634/bin )
+  INFO [1894927a] Finished in 0.291 seconds with exit status 0 (successful).
+ DEBUG [d9244b4a] Running [ -L /home/deploy/digitalrad/releases/20161027045634/log ] as deploy@107.170.35.158
+ DEBUG [d9244b4a] Command: [ -L /home/deploy/digitalrad/releases/20161027045634/log ]
+ DEBUG [d9244b4a] Finished in 0.282 seconds with exit status 1 (failed).
+ DEBUG [c8adaac3] Running [ -d /home/deploy/digitalrad/releases/20161027045634/log ] as deploy@107.170.35.158
+ DEBUG [c8adaac3] Command: [ -d /home/deploy/digitalrad/releases/20161027045634/log ]
+ DEBUG [c8adaac3] Finished in 0.288 seconds with exit status 0 (successful).
+  INFO [873d914a] Running /usr/bin/env rm -rf /home/deploy/digitalrad/releases/20161027045634/log as deploy@107.170.35.158
+ DEBUG [873d914a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /home/deploy/digitalrad/releases/20161027045634/log )
+  INFO [873d914a] Finished in 0.284 seconds with exit status 0 (successful).
+  INFO [ecefa22a] Running /usr/bin/env ln -s /home/deploy/digitalrad/shared/log /home/deploy/digitalrad/releases/20161027045634/log as deploy@107.170.35.158
+ DEBUG [ecefa22a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deploy/digitalrad/shared/log /home/deploy/digitalrad/releases/20161027045634/log )
+  INFO [ecefa22a] Finished in 0.290 seconds with exit status 0 (successful).
+ DEBUG [4fe10271] Running [ -L /home/deploy/digitalrad/releases/20161027045634/tmp/pids ] as deploy@107.170.35.158
+ DEBUG [4fe10271] Command: [ -L /home/deploy/digitalrad/releases/20161027045634/tmp/pids ]
+ DEBUG [4fe10271] Finished in 0.293 seconds with exit status 1 (failed).
+ DEBUG [6058524b] Running [ -d /home/deploy/digitalrad/releases/20161027045634/tmp/pids ] as deploy@107.170.35.158
+ DEBUG [6058524b] Command: [ -d /home/deploy/digitalrad/releases/20161027045634/tmp/pids ]
+ DEBUG [6058524b] Finished in 0.290 seconds with exit status 1 (failed).
+  INFO [99c083c3] Running /usr/bin/env ln -s /home/deploy/digitalrad/shared/tmp/pids /home/deploy/digitalrad/releases/20161027045634/tmp/pids as deploy@107.170.35.158
+ DEBUG [99c083c3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deploy/digitalrad/shared/tmp/pids /home/deploy/digitalrad/releases/20161027045634/tmp/pids )
+  INFO [99c083c3] Finished in 0.288 seconds with exit status 0 (successful).
+ DEBUG [0e4f6b99] Running [ -L /home/deploy/digitalrad/releases/20161027045634/tmp/cache ] as deploy@107.170.35.158
+ DEBUG [0e4f6b99] Command: [ -L /home/deploy/digitalrad/releases/20161027045634/tmp/cache ]
+ DEBUG [0e4f6b99] Finished in 0.290 seconds with exit status 1 (failed).
+ DEBUG [84dd31c6] Running [ -d /home/deploy/digitalrad/releases/20161027045634/tmp/cache ] as deploy@107.170.35.158
+ DEBUG [84dd31c6] Command: [ -d /home/deploy/digitalrad/releases/20161027045634/tmp/cache ]
+ DEBUG [84dd31c6] Finished in 0.287 seconds with exit status 0 (successful).
+  INFO [5940530c] Running /usr/bin/env rm -rf /home/deploy/digitalrad/releases/20161027045634/tmp/cache as deploy@107.170.35.158
+ DEBUG [5940530c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /home/deploy/digitalrad/releases/20161027045634/tmp/cache )
+  INFO [5940530c] Finished in 0.540 seconds with exit status 0 (successful).
+  INFO [c665b554] Running /usr/bin/env ln -s /home/deploy/digitalrad/shared/tmp/cache /home/deploy/digitalrad/releases/20161027045634/tmp/cache as deploy@107.170.35.158
+ DEBUG [c665b554] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deploy/digitalrad/shared/tmp/cache /home/deploy/digitalrad/releases/20161027045634/tmp/cache )
+  INFO [c665b554] Finished in 0.289 seconds with exit status 0 (successful).
+ DEBUG [15cf9fda] Running [ -L /home/deploy/digitalrad/releases/20161027045634/tmp/sockets ] as deploy@107.170.35.158
+ DEBUG [15cf9fda] Command: [ -L /home/deploy/digitalrad/releases/20161027045634/tmp/sockets ]
+ DEBUG [15cf9fda] Finished in 0.289 seconds with exit status 1 (failed).
+ DEBUG [897a19c0] Running [ -d /home/deploy/digitalrad/releases/20161027045634/tmp/sockets ] as deploy@107.170.35.158
+ DEBUG [897a19c0] Command: [ -d /home/deploy/digitalrad/releases/20161027045634/tmp/sockets ]
+ DEBUG [897a19c0] Finished in 0.286 seconds with exit status 1 (failed).
+  INFO [0d4c8135] Running /usr/bin/env ln -s /home/deploy/digitalrad/shared/tmp/sockets /home/deploy/digitalrad/releases/20161027045634/tmp/sockets as deploy@107.170.35.158
+ DEBUG [0d4c8135] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deploy/digitalrad/shared/tmp/sockets /home/deploy/digitalrad/releases/20161027045634/tmp/sockets )
+  INFO [0d4c8135] Finished in 0.296 seconds with exit status 0 (successful).
+ DEBUG [ba62b5cc] Running [ -L /home/deploy/digitalrad/releases/20161027045634/vendor/bundle ] as deploy@107.170.35.158
+ DEBUG [ba62b5cc] Command: [ -L /home/deploy/digitalrad/releases/20161027045634/vendor/bundle ]
+ DEBUG [ba62b5cc] Finished in 0.302 seconds with exit status 1 (failed).
+ DEBUG [80410c64] Running [ -d /home/deploy/digitalrad/releases/20161027045634/vendor/bundle ] as deploy@107.170.35.158
+ DEBUG [80410c64] Command: [ -d /home/deploy/digitalrad/releases/20161027045634/vendor/bundle ]
+ DEBUG [80410c64] Finished in 0.289 seconds with exit status 1 (failed).
+  INFO [418233cb] Running /usr/bin/env ln -s /home/deploy/digitalrad/shared/vendor/bundle /home/deploy/digitalrad/releases/20161027045634/vendor/bundle as deploy@107.170.35.158
+ DEBUG [418233cb] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deploy/digitalrad/shared/vendor/bundle /home/deploy/digitalrad/releases/20161027045634/vendor/bundle )
+  INFO [418233cb] Finished in 0.303 seconds with exit status 0 (successful).
+ DEBUG [29441bdc] Running [ -L /home/deploy/digitalrad/releases/20161027045634/public/uploads ] as deploy@107.170.35.158
+ DEBUG [29441bdc] Command: [ -L /home/deploy/digitalrad/releases/20161027045634/public/uploads ]
+ DEBUG [29441bdc] Finished in 0.288 seconds with exit status 1 (failed).
+ DEBUG [be2c3d5b] Running [ -d /home/deploy/digitalrad/releases/20161027045634/public/uploads ] as deploy@107.170.35.158
+ DEBUG [be2c3d5b] Command: [ -d /home/deploy/digitalrad/releases/20161027045634/public/uploads ]
+ DEBUG [be2c3d5b] Finished in 0.285 seconds with exit status 0 (successful).
+  INFO [f2e4d8b6] Running /usr/bin/env rm -rf /home/deploy/digitalrad/releases/20161027045634/public/uploads as deploy@107.170.35.158
+ DEBUG [f2e4d8b6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /home/deploy/digitalrad/releases/20161027045634/public/uploads )
+  INFO [f2e4d8b6] Finished in 0.317 seconds with exit status 0 (successful).
+  INFO [7044b0cf] Running /usr/bin/env ln -s /home/deploy/digitalrad/shared/public/uploads /home/deploy/digitalrad/releases/20161027045634/public/uploads as deploy@107.170.35.158
+ DEBUG [7044b0cf] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deploy/digitalrad/shared/public/uploads /home/deploy/digitalrad/releases/20161027045634/public/uploads )
+  INFO [7044b0cf] Finished in 0.295 seconds with exit status 0 (successful).
+ DEBUG [badcd3cd] Running [ -L /home/deploy/digitalrad/releases/20161027045634/public/assets ] as deploy@107.170.35.158
+ DEBUG [badcd3cd] Command: [ -L /home/deploy/digitalrad/releases/20161027045634/public/assets ]
+ DEBUG [badcd3cd] Finished in 0.297 seconds with exit status 1 (failed).
+ DEBUG [6ef66e8e] Running [ -d /home/deploy/digitalrad/releases/20161027045634/public/assets ] as deploy@107.170.35.158
+ DEBUG [6ef66e8e] Command: [ -d /home/deploy/digitalrad/releases/20161027045634/public/assets ]
+ DEBUG [6ef66e8e] Finished in 0.289 seconds with exit status 1 (failed).
+  INFO [58702ea6] Running /usr/bin/env ln -s /home/deploy/digitalrad/shared/public/assets /home/deploy/digitalrad/releases/20161027045634/public/assets as deploy@107.170.35.158
+ DEBUG [58702ea6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /home/deploy/digitalrad/shared/public/assets /home/deploy/digitalrad/releases/20161027045634/public/assets )
+  INFO [58702ea6] Finished in 0.294 seconds with exit status 0 (successful).
+ DEBUG [2490ec64] Running if test ! -d /home/deploy/digitalrad/releases/20161027045634; then echo "Directory does not exist '/home/deploy/digitalrad/releases/20161027045634'" 1>&2; false; fi as deploy@107.170.35.158
+ DEBUG [2490ec64] Command: if test ! -d /home/deploy/digitalrad/releases/20161027045634; then echo "Directory does not exist '/home/deploy/digitalrad/releases/20161027045634'" 1>&2; false; fi
+ DEBUG [2490ec64] Finished in 0.284 seconds with exit status 0 (successful).
+  INFO [305a4718] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /home/deploy/digitalrad/shared/bundle --without development test --deployment as deploy@107.170.35.158
+ DEBUG [305a4718] Command: cd /home/deploy/digitalrad/releases/20161027045634 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /home/deploy/digitalrad/shared/bundle --without development test --deployment )
+ DEBUG [305a4718] 	The git source `git://github.com/capistrano/rbenv.git` uses the `git` protocol, which transmits data without encryption. Disable this warning with `bundle config git.allow_insecure true`, or switch to the `https` protocol to keep your data secure.
+ DEBUG [305a4718] 	Fetching gem metadata from https://rubygems.org/
+ DEBUG [305a4718] 	.
+ DEBUG [305a4718] 	.
+ DEBUG [305a4718] 	.
+ DEBUG [305a4718] 	.
+ DEBUG [305a4718] 	.
+ DEBUG [305a4718] 	.
+ DEBUG [305a4718] 	.
+ DEBUG [305a4718] 	.
+ DEBUG [305a4718] 	.
+ DEBUG [305a4718] 	
+ DEBUG [305a4718] 	Fetching version metadata from https://rubygems.org/
+ DEBUG [305a4718] 	.
+ DEBUG [305a4718] 	.
+ DEBUG [305a4718] 	
+ DEBUG [305a4718] 	Fetching dependency metadata from https://rubygems.org/
+ DEBUG [305a4718] 	.
+ DEBUG [305a4718] 	
+ DEBUG [305a4718] 	Using rake 11.3.0
+ DEBUG [305a4718] 	Using concurrent-ruby 1.0.2
+ DEBUG [305a4718] 	Using i18n 0.7.0
+ DEBUG [305a4718] 	Using minitest 5.9.1
+ DEBUG [305a4718] 	Using thread_safe 0.3.5
+ DEBUG [305a4718] 	Using builder 3.2.2
+ DEBUG [305a4718] 	Using erubis 2.7.0
+ DEBUG [305a4718] 	Using mini_portile2 2.1.0
+ DEBUG [305a4718] 	Using rack 2.0.1
+ DEBUG [305a4718] 	Using nio4r 1.2.1
+ DEBUG [305a4718] 	Using websocket-extensions 0.1.2
+ DEBUG [305a4718] 	Using mime-types-data 3.2016.0521
+ DEBUG [305a4718] 	Using arel 7.1.4
+ DEBUG [305a4718] 	Using bcrypt 3.1.11
+ DEBUG [305a4718] 	Using method_source 0.8.2
+ DEBUG [305a4718] 	Using thor 0.19.1
+ DEBUG [305a4718] 	Using coffee-script-source 1.10.0
+ DEBUG [305a4718] 	Using execjs 2.7.0
+ DEBUG [305a4718] 	Using orm_adapter 0.5.0
+ DEBUG [305a4718] 	Using multi_json 1.12.1
+ DEBUG [305a4718] 	Using mini_magick 4.5.1
+ DEBUG [305a4718] 	Using mysql2 0.4.4
+ DEBUG [305a4718] 	Using puma 3.6.0
+Using bundler 1.13.6
+Using sass 3.4.22
+ DEBUG [305a4718] 	Using tilt 2.0.5
+ DEBUG [305a4718] 	Using turbolinks-source 5.0.0
+ DEBUG [305a4718] 	Using tzinfo 1.2.2
+ DEBUG [305a4718] 	Using nokogiri 1.6.8.1
+ DEBUG [305a4718] 	Using rack-test 0.6.3
+ DEBUG [305a4718] 	Using warden 1.2.6
+ DEBUG [305a4718] 	Using sprockets 3.7.0
+ DEBUG [305a4718] 	Using websocket-driver 0.6.4
+ DEBUG [305a4718] 	Using mime-types 3.1
+ DEBUG [305a4718] 	Using coffee-script 2.4.1
+ DEBUG [305a4718] 	Using uglifier 3.0.2
+ DEBUG [305a4718] 	Using turbolinks 5.0.1
+ DEBUG [305a4718] 	Using activesupport 5.0.0.1
+Using loofah 2.0.3
+Using mail 2.6.4
+ DEBUG [305a4718] 	Using rails-dom-testing 2.0.1
+Using globalid 0.3.7
+Using activemodel 5.0.0.1
+Using jbuilder 2.6.0
+Using rails-html-sanitizer 1.0.3
+ DEBUG [305a4718] 	Using activejob 5.0.0.1
+Using activerecord 5.0.0.1
+Using carrierwave 1.0.0.beta
+Using actionview 5.0.0.1
+ DEBUG [305a4718] 	Using actionpack 5.0.0.1
+ DEBUG [305a4718] 	Using actioncable 5.0.0.1
+ DEBUG [305a4718] 	Using actionmailer 5.0.0.1
+Using railties 5.0.0.1
+Using sprockets-rails 3.2.0
+ DEBUG [305a4718] 	Using font-awesome-rails 4.6.3.1
+Using jquery-rails 4.2.1
+Using coffee-rails 4.2.1
+Using responders 2.3.0
+Using rails 5.0.0.1
+Using sass-rails 5.0.6
+ DEBUG [305a4718] 	Using bootstrap_sb_admin_base_v2 0.3.3
+ DEBUG [305a4718] 	Using devise 4.2.0
+ DEBUG [305a4718] 	Bundle complete! 23 Gemfile dependencies, 62 gems now installed.
+ DEBUG [305a4718] 	Gems in the groups development and test were not installed.
+ DEBUG [305a4718] 	Bundled gems are installed into /home/deploy/digitalrad/shared/bundle.
+  INFO [305a4718] Finished in 4.656 seconds with exit status 0 (successful).
+ DEBUG [f6b88aeb] Running if test ! -d /home/deploy/digitalrad/releases/20161027045634; then echo "Directory does not exist '/home/deploy/digitalrad/releases/20161027045634'" 1>&2; false; fi as deploy@107.170.35.158
+ DEBUG [f6b88aeb] Command: if test ! -d /home/deploy/digitalrad/releases/20161027045634; then echo "Directory does not exist '/home/deploy/digitalrad/releases/20161027045634'" 1>&2; false; fi
+ DEBUG [f6b88aeb] Finished in 0.285 seconds with exit status 0 (successful).
+  INFO [07eb41d0] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as deploy@107.170.35.158
+ DEBUG [07eb41d0] Command: cd /home/deploy/digitalrad/releases/20161027045634 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+ DEBUG [07eb41d0] 	DEPRECATION WARNING: `config.serve_static_files` is deprecated and will be removed in Rails 5.1.
+Please use `config.public_file_server.enabled = true` instead.
+ (called from block in <top (required)> at /home/deploy/digitalrad/releases/20161027045634/config/environments/production.rb:28)
+ DEBUG [07eb41d0] 	
+ DEBUG [07eb41d0] 	I, [2016-10-27T04:57:01.982512 #11957]  INFO -- : Writing /home/deploy/digitalrad/releases/20161027045634/public/assets/admin-b462e67d7e6381b57393ebc9158e700520319753ebcc4c540884496f4776f989.css
+ DEBUG [07eb41d0] 	I, [2016-10-27T04:57:02.013973 #11957]  INFO -- : Writing /home/deploy/digitalrad/releases/20161027045634/public/assets/admin-b462e67d7e6381b57393ebc9158e700520319753ebcc4c540884496f4776f989.css.gz
+ DEBUG [07eb41d0] 	I, [2016-10-27T04:57:17.739929 #11957]  INFO -- : Writing /home/deploy/digitalrad/releases/20161027045634/public/assets/admin-828bbfd92a1de7842a1a8097b6cb10e2406a2346fecb3050d702f79fec051f54.js
+ DEBUG [07eb41d0] 	I, [2016-10-27T04:57:17.743834 #11957]  INFO -- : Writing /home/deploy/digitalrad/releases/20161027045634/public/assets/admin-828bbfd92a1de7842a1a8097b6cb10e2406a2346fecb3050d702f79fec051f54.js.gz
