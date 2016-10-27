@@ -39,11 +39,16 @@ group :development, :test do
 end
 
 group :development do
-	gem 'capistrano', '~> 3.1.0'
-	gem 'capistrano-bundler', '~> 1.1.2'
-	gem 'capistrano-rails', '~> 1.1.1'
-	# Add this if you're using rbenv
-	gem 'capistrano-rbenv', github: "capistrano/rbenv"
+# Adiciona a gem capistrano, pede para versões estáveis ou compatíveis com 3.4.0.
+  gem 'capistrano', '~> 3.4.0'
+  # Adiciona gem que expande o capistrano para ensiná-lo sobre Rails.
+  gem 'capistrano-rails', '~> 1.1.6'
+  # (Opcional) Use se você estiver usando Phusion Passenger como servidor de aplicação
+  gem 'capistrano-passenger', '~> 0.2.0'	
+  # Add this if you're using rbenv
+	
+  #gem 'capistrano-rbenv', github: "capistrano/rbenv"
+
 
 
 
