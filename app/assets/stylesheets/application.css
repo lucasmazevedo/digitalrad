@@ -23,7 +23,6 @@
  *= require ./site/animate.min
  *= require ./site/hover
  *= require ./site/jquery.fancybox
- *= require ./site/style
  *= require ./site/responsive
  *= require_self
  */
