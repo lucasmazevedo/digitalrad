@@ -10,18 +10,5 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require ./site/jquery-1.11.3.min.js
 //= require turbolinks
-//= require ./site/bootstrap.min
-//= require ./site/jquery-ui
-//= require ./site/jquery.appear
-//= require ./site/jquery.countTo
-//= require ./site/jquery.validate.min
-//= require ./site/jquery.mixitup.min
-//= require ./site/jquery.themepunch.revolution.min
-//= require ./site/jquery.themepunch.tools.min
-//= require_tree ./site/extensions
-//= require ./site/jquery.fancybox.pack
-//= require ./site/typed.min
-//= require ./site/owl.carousel.min
-//= require main.js
+

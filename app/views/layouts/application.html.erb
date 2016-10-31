@@ -9,7 +9,32 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'true' %>
-    <%= stylesheet_link_tag    'site/style.css', media: 'all', 'data-turbolinks-track': 'true' %>
+
+    <%= stylesheet_link_tag    'site/bootstrap.min', 'data-turbolinks-track': 'true' %>
+    <%= stylesheet_link_tag    'site/font-awesome.min', 'data-turbolinks-track': 'true' %>
+    <%= stylesheet_link_tag    'site/Stroke-Gap-Icons-Webfont', 'data-turbolinks-track': 'true' %>
+	<!-- revolution slider css -->
+    <%= stylesheet_link_tag    'site/settings', 'data-turbolinks-track': 'true' %>
+    <%= stylesheet_link_tag    'site/layers', 'data-turbolinks-track': 'true' %>
+    <%= stylesheet_link_tag    'site/navigation', 'data-turbolinks-track': 'true' %>
+	<!-- flaticon css -->
+    <%= stylesheet_link_tag    'site/flaticon', 'data-turbolinks-track': 'true' %>
+	<!-- jQuery ui css -->
+    <%= stylesheet_link_tag    'site/jquery-ui', 'data-turbolinks-track': 'true' %>
+	<!-- owl carousel css -->
+    <%= stylesheet_link_tag    'site/owl.carousel', 'data-turbolinks-track': 'true' %>
+    <%= stylesheet_link_tag    'site/owl.theme.default.min', 'data-turbolinks-track': 'true' %>
+	<!-- animate css -->
+    <%= stylesheet_link_tag    'site/animate.min', 'data-turbolinks-track': 'true' %>
+	<!-- hover css -->
+    <%= stylesheet_link_tag    'site/hover', 'data-turbolinks-track': 'true' %>	
+	<!-- fancybox -->
+    <%= stylesheet_link_tag    'site/jquery.fancybox', 'data-turbolinks-track': 'true' %>
+
+	<!-- master stylesheet -->
+    <%= stylesheet_link_tag    'site/style', 'data-turbolinks-track': 'true' %>
+	<!-- responsive stylesheet -->
+    <%= stylesheet_link_tag    'site/responsive', 'data-turbolinks-track': 'true' %>
   </head>
 
   <body>
@@ -167,5 +192,41 @@
 
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+<!-- jQuery js -->
+<%= javascript_include_tag 'site/jquery-1.11.3.min', 'data-turbolinks-track': 'true' %>
+<!-- bootstrap js -->
+<%= javascript_include_tag 'site/bootstrap.min', 'data-turbolinks-track': 'true' %>
+<!-- jQuery ui js -->
+<%= javascript_include_tag 'site/jquery-ui', 'data-turbolinks-track': 'true' %>
+<!-- owl carousel js -->
+<%= javascript_include_tag 'site/owl.carousel.min', 'data-turbolinks-track': 'true' %>
+<!-- jQuery appear -->
+<%= javascript_include_tag 'site/jquery.appear', 'data-turbolinks-track': 'true' %>
+<!-- jQuery countTo -->
+<%= javascript_include_tag 'site/jquery.countTo', 'data-turbolinks-track': 'true' %>
+<!-- jQuery validation -->
+<%= javascript_include_tag 'site/jquery.validate.min', 'data-turbolinks-track': 'true' %>
+<!-- mixit up -->
+<%= javascript_include_tag 'site/jquery.mixitup.min', 'data-turbolinks-track': 'true' %>
+
+<!-- revolution slider js -->
+<%= javascript_include_tag 'site/jquery.themepunch.tools.min', 'data-turbolinks-track': 'true' %>
+<%= javascript_include_tag 'site/jquery.themepunch.revolution.min', 'data-turbolinks-track': 'true' %>
+<%= javascript_include_tag 'site/extensions/revolution.extension.actions.min', 'data-turbolinks-track': 'true' %>
+<%= javascript_include_tag 'site/extensions/revolution.extension.carousel.min', 'data-turbolinks-track': 'true' %>
+<%= javascript_include_tag 'site/extensions/revolution.extension.kenburn.min', 'data-turbolinks-track': 'true' %>
+<%= javascript_include_tag 'site/extensions/revolution.extension.layeranimation.min', 'data-turbolinks-track': 'true' %>
+<%= javascript_include_tag 'site/extensions/revolution.extension.migration.min', 'data-turbolinks-track': 'true' %>
+<%= javascript_include_tag 'site/extensions/revolution.extension.navigation.min', 'data-turbolinks-track': 'true' %>
+<%= javascript_include_tag 'site/extensions/revolution.extension.parallax.min', 'data-turbolinks-track': 'true' %>
+<%= javascript_include_tag 'site/extensions/revolution.extension.video.min', 'data-turbolinks-track': 'true' %>
+
+<!-- fancy box -->
+<%= javascript_include_tag 'site/jquery.fancybox.pack', 'data-turbolinks-track': 'true' %>
+<!-- type script -->
+<%= javascript_include_tag 'site/typed.min', 'data-turbolinks-track': 'true' %>
+<!-- theme custom js  -->
+<%= javascript_include_tag 'main', 'data-turbolinks-track': 'true' %>
   </body>
 </html>
