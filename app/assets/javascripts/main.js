@@ -36,7 +36,7 @@ function revolutionSliderActiver () {
 		jQuery("#slider1").revolution({
 			sliderType:"standard",
 			sliderLayout:"auto",
-			delay:5000,
+			delay:6000,
 			navigation: {
 				arrows:{enable:true}
 			},
@@ -241,39 +241,7 @@ function gMap () {
         });
 	};
 }
-// 10. contactFormValidation
-function contactFormValidation () {
 
-	if($('.contact-form').length){
-		$('.contact-form').validate({ // initialize the plugin
-			rules: {
-				name: {
-					required: true
-				},
-				email: {
-					required: true,
-					email: true
-				},
-				message: {
-					required: true
-				},
-				subject: {
-					required: true
-				}
-			},
-			submitHandler: function (form) {
-				// sending value with ajax request
-				$.post($(form).attr('action'), $(form).serialize(), function (response) {
-					$(form).parent('div').append(response);
-					$(form).find('input[type="text"]').val('');
-					$(form).find('input[type="email"]').val('');
-					$(form).find('textarea').val('');
-				});
-				return false;
-			}
-		});
-	}
-}
 // 11. stickyHeader
 function stickyHeader () {
 	if ($('.stricky').length && $(window).width() >= 500 ) {

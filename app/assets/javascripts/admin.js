@@ -13,3 +13,17 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap_sb_admin_base_v2
+//= require froala_editor.min.js
+//= require languages/pt_br.js
+//= require plugins/code_view.min.js
+
+
+$(function() {
+	$('#edit').froalaEditor({
+      // Set the language code.
+      language: 'pt_br',
+      heightMin: 300,
+      heightMax: 400,
+
+    })
+});

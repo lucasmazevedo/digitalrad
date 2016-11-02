@@ -14,96 +14,10 @@
 			<div class="col-md-4 pull-right">
 				<div class="single-sidebar-widget">
 					<div class="sec-title">
-						<h2><span>Categorias</span></h2>
+						<h2><span>DigitalRad no facebook</span></h2>
 					</div>
-					<div class="categories">
-						<ul>
-							<li><a href="#">Eventos</a></li>
-							<li><a href="#">Telerradiologia</a></li>
-							<li><a href="#">Novidades</a></li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="single-sidebar-widget">
-					<div class="sec-title">
-						<h2><span>instagram</span></h2>
-					</div>
-					<div class="insta-feed">
-						<ul>
-							<li class="img-cap-effect">
-								<div class="img-box">
-									<%= image_tag 'insta-feed1.jpg' -%>
-									<div class="img-caption">
-										<div class="box-holder">
-											<ul>
-												<li><a href="#"><i class="fa fa-link"></i></a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="img-cap-effect">
-								<div class="img-box">
-									<%= image_tag 'insta-feed1.jpg' -%>
-									<div class="img-caption">
-										<div class="box-holder">
-											<ul>
-												<li><a href="#"><i class="fa fa-link"></i></a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="img-cap-effect">
-								<div class="img-box">
-									<%= image_tag 'insta-feed1.jpg' -%>
-									<div class="img-caption">
-										<div class="box-holder">
-											<ul>
-												<li><a href="#"><i class="fa fa-link"></i></a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="img-cap-effect">
-								<div class="img-box">
-									<%= image_tag 'insta-feed1.jpg' -%>
-									<div class="img-caption">
-										<div class="box-holder">
-											<ul>
-												<li><a href="#"><i class="fa fa-link"></i></a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="img-cap-effect">
-								<div class="img-box">
-									<%= image_tag 'insta-feed1.jpg' -%>
-									<div class="img-caption">
-										<div class="box-holder">
-											<ul>
-												<li><a href="#"><i class="fa fa-link"></i></a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="img-cap-effect">
-								<div class="img-box">
-									<%= image_tag 'insta-feed1.jpg' -%>
-									<div class="img-caption">
-										<div class="box-holder">
-											<ul>
-												<li><a href="#"><i class="fa fa-link"></i></a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
+					<div class="popular-post">
+						<div class="fb-page" data-href="https://www.facebook.com/digitalrad/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/digitalrad/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/digitalrad/">DigitalRad</a></blockquote></div>
 					</div>
 				</div>
 				
@@ -112,109 +26,37 @@
 					
 				<div class="single-post-wrapper">
 
-					<article class="single-blog-post img-cap-effect">
-						<!-- <div class="img-box">
-							<%#= image_tag 'blog-page/1.jpg' -%>
-							<div class="img-caption">
-								<div class="box-holder">
-									<ul>
-										<li><a href="#"><i class="fa fa-heart"></i></a></li>
-										<li><a href="#"><i class="fa fa-link"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</div> -->
-						<div class="meta-info">
-							<div class="date-box">
-								<div class="inner-box">
-									<b>02</b>
-									Dez
-								</div>
-							</div>
-							<div class="content-box">								
-								<ul class="post-links">
-									<li><a href="#"><i class="fa fa-list-alt"></i> Categoria:  Novidades</a></li>
-									<li><a href="#"><i class="fa fa-comments-o"></i> Comentários: 8</a></li>
-									<li><a href="#"><i class="fa fa-tag"></i> mama, câncer, ressonância</a></li>
-								</ul>
-							</div>
-						</div>
-						<h3>A Ressonância de Mama para exclusão do diagnóstico do Câncer de Mama</h3>
-						<p>As pacientes sintomáticas ou aquelas que apresentam alterações detectadas pelos exames de rotina, normalmente são submetidas a um conjunto de exames e a certeza diagnóstica só se dava através da biópsia cirúrgica.</p>
-						<a href="#" class="read-more">Ler Mais</a>
-					</article>					
 
+				<% @news.each do |article| -%>
 					<article class="single-blog-post img-cap-effect">
-						<!-- <div class="img-box">
-							<%#= image_tag 'blog-page/1.jpg' -%>
-							<div class="img-caption">
-								<div class="box-holder">
-									<ul>
-										<li><a href="#"><i class="fa fa-heart"></i></a></li>
-										<li><a href="#"><i class="fa fa-link"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</div> -->
 						<div class="meta-info">
 							<div class="date-box">
 								<div class="inner-box">
-									<b>02</b>
-									Dez
+									<b><%= I18n.l(article.created_at, format: :cday)-%></b>
+									<%= I18n.l(	article.created_at, format: :cmonth)-%>
 								</div>
 							</div>
 							<div class="content-box">								
 								<ul class="post-links">
-									<li><a href="#"><i class="fa fa-list-alt"></i> Categoria:  Novidades</a></li>
-									<li><a href="#"><i class="fa fa-comments-o"></i> Comentários: 8</a></li>
-									<li><a href="#"><i class="fa fa-tag"></i> mama, câncer, ressonância</a></li>
+									<li><a href="#"><i class="fa fa-tag"></i> Categoria: <%= article.category.name -%></a></li>
+									<li><a href="#"><i class="fa fa-comments-o"></i> <%= I18n.l(article.created_at, format: :long)-%></a></li>
 								</ul>
 							</div>
 						</div>
-						<h3>A Ressonância de Mama para exclusão do diagnóstico do Câncer de Mama</h3>
-						<p>As pacientes sintomáticas ou aquelas que apresentam alterações detectadas pelos exames de rotina, normalmente são submetidas a um conjunto de exames e a certeza diagnóstica só se dava através da biópsia cirúrgica.</p>
-						<a href="#" class="read-more">Ler Mais</a>
+						<h3><%= article.title -%></h3>
+						<p><%= truncate(article.description, length: 460, escape: false) -%></p>
+						<%= link_to 'Leia Mais', shownews_path(article.id), class: 'read-more' %>
 					</article>					
+				<% end -%>
 
-					<article class="single-blog-post img-cap-effect">
-						<!-- <div class="img-box">
-							<%#= image_tag 'blog-page/1.jpg' -%>
-							<div class="img-caption">
-								<div class="box-holder">
-									<ul>
-										<li><a href="#"><i class="fa fa-heart"></i></a></li>
-										<li><a href="#"><i class="fa fa-link"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</div> -->
-						<div class="meta-info">
-							<div class="date-box">
-								<div class="inner-box">
-									<b>02</b>
-									Dez
-								</div>
-							</div>
-							<div class="content-box">								
-								<ul class="post-links">
-									<li><a href="#"><i class="fa fa-list-alt"></i> Categoria:  Novidades</a></li>
-									<li><a href="#"><i class="fa fa-comments-o"></i> Comentários: 8</a></li>
-									<li><a href="#"><i class="fa fa-tag"></i> mama, câncer, ressonância</a></li>
-								</ul>
-							</div>
-						</div>
-						<h3>A Ressonância de Mama para exclusão do diagnóstico do Câncer de Mama</h3>
-						<p>As pacientes sintomáticas ou aquelas que apresentam alterações detectadas pelos exames de rotina, normalmente são submetidas a um conjunto de exames e a certeza diagnóstica só se dava através da biópsia cirúrgica.</p>
-						<a href="#" class="read-more">Ler Mais</a>
-					</article>
 
 				</div>
 
-				<ul class="page-navigation text-left">
+				<!-- <ul class="page-navigation text-left">
 					<li><span>1</span></li>
 					<li><a href="#">2</a></li>
 					<li><a href="#"><i class="fa fa-long-arrow-right"></i></a></li>
-				</ul>
+				</ul> -->
 
 			</div>
 		</div>

@@ -1,0 +1,60 @@
+<section class="inner-banner">
+	<div class="thm-container clearfix">
+		<h2 class="pull-left">Notícia</h2>
+		<ul class="breadcumb pull-right">
+			<li><%= link_to "<i class=\"fa fa-home\"></i> Início".html_safe, root_path %></li>
+			<li><span>Notícia</span></li>
+		</ul>
+	</div>
+</section>
+
+<section class="sec-padding blog-page single-post-page ">
+	<div class="thm-container">
+		<div class="row">
+			<div class="col-md-4 pull-right">
+				
+				<div class="single-sidebar-widget">
+					<div class="sec-title">
+						<h2><span>DigitalRad no Facebook</span></h2>
+					</div>
+					<div class="popular-post">
+						<div class="popular-post">
+						<div class="fb-page" data-href="https://www.facebook.com/digitalrad/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/digitalrad/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/digitalrad/">DigitalRad</a></blockquote></div>
+					</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8 pull-left">
+					
+				<div class="single-post-wrapper">		
+
+					<article class="single-blog-post img-cap-effect">
+						<!-- <div class="img-box">
+							<img src="images/blog-page/4.jpg" alt="Awesome Image"/>
+						</div> -->
+						<div class="meta-info">
+							<div class="date-box">
+								<div class="inner-box">
+									<b><%= I18n.l(@article.created_at, format: :cday)-%></b>
+									<%= I18n.l(@article.created_at, format: :cmonth)-%>
+								</div>
+							</div>
+							<div class="content-box">
+								<h3><%= @article.title -%></h3>
+							</div>
+						</div>
+						<p style="text-align:justify;"><%= @article.description.html_safe -%></p>
+					</article>
+
+					<div class="tag-social-box clearfix">
+						<div class="social-box pull-left">
+						<%= social_share_button_tag(@article.title) %>
+						</div>
+					</div>
+	
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>

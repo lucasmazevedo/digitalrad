@@ -1,7 +1,7 @@
 <section class="rev_slider_wrapper thm-banner-wrapper">
 	<div id="slider1" class="rev_slider"  data-version="5.0">
 		<ul>
-
+		<% @features.each do |slide| -%>
 			<li data-transition="fade" data-ease="SlowMo.ease">
 				<%= image_tag 'slider/1.jpg' -%>
 				<div class="tp-caption sfb tp-resizeme"
@@ -12,23 +12,23 @@
 							data-transform_in="o:0"
 							data-transform_out="o:0"
 							data-start="500">
-				<%= image_tag 'slider/1_icon.png' -%>
+					<%= image_tag slide.photo.slide -%>
 					</div>
 
 
 					<div class="tp-caption sfb tp-resizeme caption-h1 corgange"
-				        data-x="right" data-hoffset="20"
+				        data-x="left" data-hoffset="668"
 				        data-y="top" data-voffset="90"
 				        data-whitespace="nowrap"
 				        data-transform_idle="o:1;"
 				        data-transform_in="o:0"
 				        data-transform_out="o:0"
 				        data-start="500">
-						laudos a distância
+						<%= slide.title -%>
 				    </div>
 
 					<div class="tp-caption sfb tp-resizeme caption-divider"
-				        data-x="right" data-hoffset="390"
+				        data-x="left" data-hoffset="668"
 				        data-y="top" data-voffset="160"
 				        data-whitespace="nowrap"
 				        data-transform_idle="o:1;"
@@ -39,85 +39,27 @@
 				    </div>
 
 				<div class="tp-caption sfb tp-resizeme caption-p"
-			        data-x="right" data-hoffset="5"
+			        data-x="left" data-hoffset="668"
 			        data-y="top" data-voffset="170"
-			        data-whitespace="nowrap"
+			        
 			        data-transform_idle="o:1;"
 			        data-transform_in="o:0"
 			        data-transform_out="o:0"
 			        data-start="1000">
-					Contamos com uma equipe de radiologistas formados<br> em renomadas universidades e com experiência em<br> reconhecidos centros médicos, todos sempre prontos<br> para oferecer o melhor laudo ao seu serviço de imagem.
+			        <%= slide.description -%>
 			    </div>
 				<div class="tp-caption sfl tp-resizeme"
-			        data-x="right" data-hoffset="325"
-			        data-y="top" data-voffset="310"
+			        data-x="right" data-hoffset="330"
+			        data-y="top" data-voffset="350"
 			        data-whitespace="nowrap"
 			        data-transform_idle="o:1;"
 			        data-transform_in="o:0"
 			        data-transform_out="o:0"
 			        data-start="1500">
-					<a href="#" class="thm-btn">Conheça Mais <i class="fa fa-arrow-right"></i></a>
+					<a href="<%= slide.link -%>" class="thm-btn">Conheça Mais <i class="fa fa-arrow-right"></i></a>
 			    </div>
 			</li>
-
-			<li data-transition="fade" data-ease="SlowMo.ease">
-				<%= image_tag 'slider/2.jpg' -%>
-				<div class="tp-caption sfb tp-resizeme"
-							data-x="left" data-hoffset="-140"
-							data-y="top" data-voffset="100"
-							data-whitespace="nowrap"
-							data-transform_idle="o:1;"
-							data-transform_in="o:0"
-							data-transform_out="o:0"
-							data-start="500">
-					<%= image_tag 'slider/2_icon.png' -%>
-					</div>
-
-
-					<div class="tp-caption sfb tp-resizeme caption-h1 corgange"
-				        data-x="right" data-hoffset="20"
-				        data-y="top" data-voffset="90"
-				        data-whitespace="nowrap"
-				        data-transform_idle="o:1;"
-				        data-transform_in="o:0"
-				        data-transform_out="o:0"
-				        data-start="500">
-						laudos a distância
-				    </div>
-
-					<div class="tp-caption sfb tp-resizeme caption-divider"
-				        data-x="right" data-hoffset="390"
-				        data-y="top" data-voffset="160"
-				        data-whitespace="nowrap"
-				        data-transform_idle="o:1;"
-				        data-transform_in="o:0"
-				        data-transform_out="o:0"
-				        data-start="500">
-						<span class="divider"></span>
-				    </div>
-
-				<div class="tp-caption sfb tp-resizeme caption-p"
-			        data-x="right" data-hoffset="5"
-			        data-y="top" data-voffset="170"
-			        data-whitespace="nowrap"
-			        data-transform_idle="o:1;"
-			        data-transform_in="o:0"
-			        data-transform_out="o:0"
-			        data-start="1000">
-					Contamos com uma equipe de radiologistas formados<br> em renomadas universidades e com experiência em<br> reconhecidos centros médicos, todos sempre prontos<br> para oferecer o melhor laudo ao seu serviço de imagem.
-			    </div>
-				<div class="tp-caption sfl tp-resizeme"
-			        data-x="right" data-hoffset="325"
-			        data-y="top" data-voffset="310"
-			        data-whitespace="nowrap"
-			        data-transform_idle="o:1;"
-			        data-transform_in="o:0"
-			        data-transform_out="o:0"
-			        data-start="1500">
-					<a href="#" class="thm-btn">Conheça Mais <i class="fa fa-arrow-right"></i></a>
-			    </div>
-			</li>
-
+			<% end -%>
 		</ul>
 	</div>
 </section>
@@ -198,7 +140,7 @@
 						<div class="accrodion-content">
 							<div class="img-caption">
 								<div class="content-box">
-									<p><%= service.description -%></p>
+									<p><%= service.description.html_safe -%></p>
 								</div>
 							</div>
 						</div>
@@ -257,19 +199,21 @@
 						<div class="img-caption">
 							<div class="box-holder">
 								<ul>
-									<li><a href="#"><i class="fa fa-link"></i></a></li>
+									<li><%= link_to '<i class="fa fa-link"></i>'.html_safe, shownews_path(article.id) %></li>
 								</ul>
 							</div>
 						</div>
 					</div>
 					<div class="content-box">
-						<a href="#"><h3><%= article.title -%></h3></a>
+					<%= link_to shownews_path(article.id) do %>
+						<h3><%= article.title -%></h3>
+					<% end -%>
 						<ul class="meta">
-							<li><a href="#"><%= article.category.name -%></a></li>
-							<li><a href="#"><%= I18n.l(article.created_at, format: :long) -%></a></li>
+							<li><a href="javascript:void()"><%= article.category.name -%></a></li>
+							<li><a href="javascript:void()"><%= I18n.l(article.created_at, format: :long) -%></a></li>
 						</ul>
-						<p><%= truncate(article.description, length: 170, ) -%></p>
-						<a href="#">Leia Mais +</a>
+						<p><%= truncate(article.description, length: 210, escape: false) -%></p>
+						<%= link_to 'Leia Mais +', shownews_path(article.id) %>
 					</div>
 				</div>
 				<% end -%>
@@ -283,28 +227,11 @@
 	<div class="thm-container">
 		<div class="client-carousel">
 			<div class="owl-carousel owl-theme">
+			<% @partners.each do |partner| -%>
 				<div class="item">
-					<%= image_tag "clients/2.jpg" -%>
+					<%= image_tag partner.logo.testemonials -%>
 				</div>
-				<div class="item">
-					<%= image_tag "clients/1.jpg" -%>
-				</div>
-				<div class="item">
-					<%= image_tag "clients/3.jpg" -%>
-				</div>
-				<div class="item">
-					<%= image_tag "clients/2.jpg" -%>
-				</div>
-				<div class="item">
-					<%= image_tag "clients/1.jpg" -%>
-				</div>
-				<div class="item">
-					<%= image_tag "clients/2.jpg" -%>
-				</div>
-				<div class="item">
-					<%= image_tag "clients/3.jpg" -%>
-				</div>
-		
+			<% end -%>	
 			</div>
 		</div>
 	</div>

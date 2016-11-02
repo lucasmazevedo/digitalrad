@@ -38,6 +38,15 @@
   </head>
 
   <body>
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
   <header id="header" class="stricky">
 		<div class="thm-container clearfix">
 			<div class="logo pull-left">
@@ -89,7 +98,7 @@
 						<div class="text-box">
 							<h3>Começar é simples. Descomplique</h3>
 							<p>Em menos de 1 hora seu serviço de radiologia pode<br> começar a receber nossos laudos</p>
-							<p><span class="number">(86) 9 9999-9999</span> <b>ou</b> <a href="/">Entre em Contato</a></p>
+							<p><span class="number">(86) 98154-5023 / (86) 98182-3366</span><br><%= link_to "Entre em Contato", contato_path %></p>
 						</div>
 					</div>
 				</div>
@@ -105,7 +114,7 @@
 					<%= link_to image_tag('footer-logo.png'), root_path %>
 					
 					<p>a DIGITALRAD visa oferecer a mais completa solução do mercado brasileiro em Telerradiologia.</p>
-					<a href="/">Saiba Mais <i class="fa fa-angle-double-right"></i></a>
+					<%= link_to "Saiba Mais <i class=\"fa fa-angle-double-right\"></i>".html_safe, sobre_path %>
 					<ul class="social">
 						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -120,13 +129,12 @@
 						<h3><span>Mapa do Site</span></h3>
 					</div>
 					<ul class="link-list">
-						<li><a href="/">Sobre</a></li>
-						<li><a href="/">Blog</a></li>
-						<li><a href="/">Nosso Serviços</a></li>
-						<li><a href="/">Como Funciona</a></li>
-						<li><a href="/">Casos Clínicos</a></li>
-						<li><a href="/">Fale Conosco</a></li>
-
+						<li class="<%= active_class(sobre_path) -%>"><%= link_to 'Sobre', sobre_path -%></li>
+						<li class="<%= active_class(servicos_path) -%>"><%= link_to "Nosso Serviços", servicos_path %></li>
+						<li class="<%= active_class(blog_path) -%>"><%= link_to "Blog", blog_path %></li>
+						<li class="<%= active_class(comofunciona_path) -%>"><%= link_to "Como Funciona", comofunciona_path %></li>
+						<li class="<%= active_class(casos_path) -%>"><%= link_to "Casos Clínicos", casos_path %></li>
+						<li class="<%= active_class(contato_path) -%>"><%= link_to "Fale Conosco", contato_path %></li>
 					</ul>
 				</div>
 			</div>
@@ -137,18 +145,18 @@
 				<ul class="contact-infos">
 					<li>
 						<div class="icon-box">
-							<i class="fa fa-map-marker"></i>
+							<i class="fa fa-phone"></i>
 						</div>
 						<div class="text-box">
-							<p><b>Digital Rad </b> <br> Av. João Antonio Leitão, 3868, Morada do Sol - Teresina/PI</p>
+							<p><span class="sbold italic">+55 (86) 98154-5023</span></p>
 						</div>
 					</li>
 					<li>
 						<div class="icon-box">
-							<i class="fa fa-phone"></i>
+							<i class="fa fa-whatsapp"></i>
 						</div>
 						<div class="text-box">
-							<p><span class="sbold italic">+55 86 99999-9999  /  3333-3333</span></p>
+							<p><span class="sbold italic">+55 (86) 98182-3366</span></p>
 						</div>
 					</li>
 					<li>
@@ -159,6 +167,7 @@
 							<p>atendimento@digitalrad.com.br</p>
 						</div>
 					</li>
+
 					<li>
 						<div class="icon-box">
 							<i class="icon icon-Timer"></i>
@@ -167,6 +176,7 @@
 							<p>Segunda - Sexta : <span class="sbold">8:00 - 18:00</span></p>
 						</div>
 					</li>
+
 				</ul>
 			</div>
 			<div class="col-md-2 col-sm-6 footer-widget">

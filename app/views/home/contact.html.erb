@@ -14,20 +14,7 @@
 			<p>A Digital Rad gosta de conversar com o mercado de radiologia e de saúde. Temos prazer em ouvi-lo. Por favor, use este espaço para entrar em contato conosco.</p>
 		</div>
 		<div class="row">
-			<div class="col-md-4">
-				<div class="contact-info">
-					<ul>
-						<li>
-							<div class="icon-box">
-								<i class="fa fa-map-marker"></i>
-							</div>
-							<div class="content">
-								<p>Av. João Antonio Leitão, 3868<br>Morada do Sol - Teresina/PI</p>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
+			
 			<div class="col-md-4">
 				<div class="contact-info">
 					<ul>
@@ -36,7 +23,7 @@
 								<i class="fa fa-envelope-o"></i>
 							</div>
 							<div class="content">
-								<p>contato@digitalrad.com.br <br>orcamento@digitalrad.com.br</p>
+								<p>Email: <br>atendimento@digitalrad.com.br</p>
 							</div>
 						</li>
 					</ul>
@@ -50,7 +37,21 @@
 								<i class="fa fa-phone"></i>
 							</div>
 							<div class="content">
-								<p>+55 (86) 98800-0088 <br>+55 (86) 98800-0088</p>
+								<p>Telefone:<br>(86) 98154-5023</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="contact-info">
+					<ul>
+						<li>
+							<div class="icon-box">
+								<i class="fa fa-whatsapp"></i>
+							</div>
+							<div class="content">
+								<p>Whatsapp:<br>(86) 98182-3366</p>
 							</div>
 						</li>
 					</ul>
@@ -59,13 +60,18 @@
 		</div>
 		<div class="row">
 			<div class="col-md-7 col-sm-6 col-xs-12 pull-left">
-				<form action="include/sendemail.php" class="contact-form contact-page">
-					<p><input type="text" placeholder="Nome Completo" name="name"></p>
-					<p><input type="text" placeholder="E-mail" name="email"></p>
-					<p><input type="text" placeholder="Assunto" name="subject"></p>
-					<p><textarea name="message" placeholder="Mensagem"></textarea></p>
-					<button type="submit" class="thm-btn">Enviar <i class="fa fa-arrow-right"></i></button>
-				</form>
+			<%= form_for @message, url: enviamail_path, :html => { :class => "contact-form contact-page"} do |f| %> 
+
+		                                      
+				<p><%= f.text_field :name, placeholder: "Nome Completo", required: true %></p>
+				<p><%= f.text_field :email, placeholder: "E-mail", required: true %></p>
+				<p><%= f.text_field :subject, placeholder: "Assunto", required: true %></p>
+				<p><%= f.text_area :message, placeholder: "Mensagem", required: true %></p>
+
+				<%= button_tag(type: 'submit', class: "thm-btn") do %>
+				 	Enviar <i class="fa fa-arrow-right"></i>
+				<% end %>
+			<% end %>
 			</div>
 			<div class="col-md-4 hidden-sm text-center pull-right">
 				<%= image_tag 'request-qoute-man.png' -%>

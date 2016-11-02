@@ -23,7 +23,29 @@
 
   <div class="field">
     <%= f.label :description %>
-    <%= f.text_area :description, class: "form-control", placehold: "Conteúdo" %>
+    <%= f.text_area :description, id: 'edit', class: "form-control", placehold: "Conteúdo", value: '<div class="single-job-details">
+                <h2>ANAMNESE</h2>
+                <ul class="list-item">
+                  <li>Paciente masculino, 63 anos;</li>
+                  <li>Paciente em investigação de quadro de dispnéia. Realizou ecocardiograma transtorácico, que evidenciou hipertrofia ventricular esquerda;</li>
+                  <li>Sem outros dados relevantes de história pregressa;</li>
+                  <li>Encaminhado à Ressonância Magnética cardíaca para elucidação diagnóstica.</li>
+                </ul>
+              </div>
+
+              <div class="single-job-details">
+                <h2>LAUDO</h2>
+                <p>Imagens de cineressonância (vídeos 1 e 2) demonstrando disfunção sistólica moderada do ventrículo esquerdo (FEVE = 40%). Adicionalmente, observa-se importante hipertrofia concêntrica do ventrículo esquerdo (espessura máxima de 18mm) e derrame pericárdico discreto.</p>
+              </div>
+
+              <div class="single-job-details">
+                <h2>DISCUSSÃO</h2>
+                <ul class="list-item">
+                  <li>A amiloidose cardíaca é uma entidade heterogênea, que consiste do depósito de estruturas protéicas de baixo peso molecular no miocárdio. Conforme a origem proteína depositada, podem ser divididas em amiloidose primária (AL) ou secundária (AA).</li>
+                  <li>Um subtipo genético de amiloidose ligado a alteração no gene da transtiretina (TTR), localizado no cromossomo 18, pode causar um espectro de depósito amilóide cardíaco. Embora o tipo de realce tardio habitualmente descrito na amiloidose seja o acometimento difuso do subendocárdio, na variedade TTR é descrito um “gradiente base-ápex” de impregnação do gadolíneo1, como no presente caso clínico.</li>
+                  <li>A Ressonância Magnética Cardíaca é ferramenta importante na investigação não invasiva das miocardiopatias infiltrativas como a amiloidose, tendo indicação de realização conforme as atuais diretrizes (classe de recomendação IIa, nível de evidência B)2.</li>
+                </ul>
+              </div>' %>
   </div>
 
   <div class="field">

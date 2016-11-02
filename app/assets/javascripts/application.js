@@ -11,4 +11,4 @@
 // about supported directives.
 //
 //= require turbolinks
-
+//= require social-share-button

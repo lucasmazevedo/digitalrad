@@ -22,7 +22,7 @@
 					</div>
 					<div class="content">
 						<h3><%= service.title -%></h3>
-						<p><%= service.description -%></p>
+						<p><%= service.description.html_safe -%></p>
 					</div>
 				</div>
 				<% end -%>
@@ -109,42 +109,11 @@
 		</div>
 		<div class="client-carousel">
 			<div class="owl-carousel owl-theme">
+			<% @partners.each do |partner| -%>
 				<div class="item">
-					<%= image_tag 'clients/3.jpg' -%>
+					<%= image_tag partner.logo.testemonials -%>
 				</div>
-				<div class="item">
-					<%= image_tag 'clients/1.jpg' -%>
-				</div>
-				<div class="item">
-					<%= image_tag 'clients/2.jpg' -%>
-				</div>
-				<div class="item">
-					<%= image_tag 'clients/3.jpg' -%>
-				</div>
-				<div class="item">
-					<%= image_tag 'clients/1.jpg' -%>
-				</div>
-				<div class="item">
-					<%= image_tag 'clients/2.jpg' -%>
-				</div>
-				<div class="item">
-					<%= image_tag 'clients/1.jpg' -%>
-				</div>
-				<div class="item">
-					<%= image_tag 'clients/3.jpg' -%>
-				</div>
-				<div class="item">
-					<%= image_tag 'clients/2.jpg' -%>
-				</div>
-				<div class="item">
-					<%= image_tag 'clients/3.jpg' -%>
-				</div>
-				<div class="item">
-					<%= image_tag 'clients/1.jpg' -%>
-				</div>
-				<div class="item">
-					<%= image_tag 'clients/2.jpg' -%>
-				</div>
+			<% end -%>
 			</div>
 		</div>
 	</div>

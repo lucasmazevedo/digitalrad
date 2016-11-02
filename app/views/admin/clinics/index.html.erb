@@ -11,7 +11,7 @@
                                         <tr>
                                             <th>#</th>
                                             <th>Titulo</th>
-                                            <th>Descrição</th>
+                                            <th>Caso</th>
                                             <th>Imagem</th>
                                             <th>Status</th>
                                             <th>Ações</th>
@@ -22,8 +22,8 @@
                                           <tr>
                                             <td><%= clinic.id %></td>
                                             <td><%= clinic.title %></td>
-                                            <td><%= clinic.description %></td>
-                                            <td><%= image_tag clinic.photos[0], width: "50px" if not clinic.photos.blank? %></td>
+                                            <td><%= clinic.name %></td>
+                                            <td><%= image_tag clinic.photos[0].thumb if not clinic.photos.blank? %></td>
                                             <td><%= clinic.statuses %></td>
                                             <td>
                                               <%= link_to 'Exibir', [:admin, clinic], class: "btn btn-info btn-sm" %>

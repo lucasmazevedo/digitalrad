@@ -714,6 +714,11 @@ li {
   font-style: italic;
   color: #fff;
   line-height: 28px;
+  white-space: normal;
+  width: 500px;
+  height: 180px;
+  text-align: justify;
+
 }
 .thm-banner-wrapper .caption-divider span.divider {
   width: 108px;
@@ -1780,7 +1785,7 @@ li {
 .footer-widget .link-list a {
   color: #62666A;
   text-transform: capitalize;
-  line-height: 39px;
+  line-height: 30px;
   transition: all .3s ease;
 }
 .footer-widget .link-list a:hover {
