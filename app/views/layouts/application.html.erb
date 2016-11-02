@@ -57,30 +57,16 @@
 					<ul class="nav">
 						<li class="<%= active_class(root_path) -%>"><%= link_to "Início", root_path %></li>
 						<li class="<%= active_class(sobre_path) -%>"><%= link_to 'Sobre', sobre_path -%></li>
-						<li class="<%= active_class(servicos_path) -%>"><%= link_to "Nosso Serviços", servicos_path %></li>
+						<li class="<%= active_class(servicos_path) -%>"><%= link_to "Serviços", servicos_path %></li>
 						<li class="<%= active_class(blog_path) -%>"><%= link_to "Blog", blog_path %></li>
 						<li class="<%= active_class(comofunciona_path) -%>"><%= link_to "Como Funciona", comofunciona_path %></li>
 						<li class="<%= active_class(casos_path) -%>"><%= link_to "Casos Clínicos", casos_path %></li>
 						<li class="<%= active_class(contato_path) -%>"><%= link_to "Fale Conosco", contato_path %></li>
+						<li class="active"><%= link_to "<i class='fa fa-user'></i> Entrar".html_safe, laudos_path %></li>
 					</ul>
 				</div>
 
-				<div class="nav-header">
-					<ul>
-						<li class="menu-expander"><button><i class="fa fa-bars"></i></button></li>
-						<li>
-							<button><i class="icon icon-Search"></i></button>
-							<ul class="search-box">
-								<li>
-									<form action="#">
-										<input type="text" placeholder="Buscar no site">
-										<button type="submit"><i class="icon icon-Search"></i></button>
-									</form>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
+				
 			</div>
 		</div>
 	</header>

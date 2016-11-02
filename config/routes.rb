@@ -25,5 +25,8 @@ Rails.application.routes.draw do
   get 'fale-conosco', to: 'home#contact', as: 'contato'
   post 'fale-conosco', to: 'home#sendemail', as: 'enviamail'
 
+  get "/laudos/default.asp" => redirect("http://laudos.telelaudos.com.br")
+  get "/laudos" => redirect("http://laudos.telelaudos.com.br"), as: "laudos"
+
 
 end
