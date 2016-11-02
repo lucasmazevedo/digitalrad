@@ -441,8 +441,6 @@ jQuery(document).on('ready', function () {
 		selectMenu();
 		clientCarousel();
 		CounterNumberChanger();
-		contactFormValidation();
-		gMap();
 		fleetGallery();
 		GalleryFancyboxActivator();
 		typed();
