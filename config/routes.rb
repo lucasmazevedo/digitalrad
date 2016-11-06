@@ -27,6 +27,7 @@ Rails.application.routes.draw do
 
   get "/laudos/default.asp" => redirect("http://laudos.telelaudos.com.br")
   get "/laudos" => redirect("http://laudos.telelaudos.com.br"), as: "laudos"
+  get "/sistema" => redirect("http://ivangomes.ddns.net:8015/digitalrad"), as: "sistema"
 
 
 end
