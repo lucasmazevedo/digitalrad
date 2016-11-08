@@ -55,7 +55,7 @@
 			<div class="nav-holder pull-right">
 				<div class="nav-footer">
 					<ul class="nav">
-						<li class="<%= active_class(root_path) -%>"><%= link_to "Início", root_path %></li>
+						<li class="<%= active_class(root_path) -%>"><%= link_to "Início", root_path, "data-turbolinks": false %></li>
 						<li class="<%= active_class(sobre_path) -%>"><%= link_to 'Sobre', sobre_path -%></li>
 						<li class="<%= active_class(servicos_path) -%>"><%= link_to "Serviços", servicos_path %></li>
 						<li class="<%= active_class(blog_path) -%>"><%= link_to "Blog", blog_path %></li>
