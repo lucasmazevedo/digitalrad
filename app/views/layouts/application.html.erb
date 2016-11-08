@@ -102,6 +102,7 @@
 					<%= link_to image_tag('footer-logo.png'), root_path %>
 					
 					<p>a DIGITALRAD visa oferecer a mais completa solução do mercado brasileiro em Telerradiologia.</p>
+
 					<%= link_to "Saiba Mais <i class=\"fa fa-angle-double-right\"></i>".html_safe, sobre_path %>
 					<ul class="social">
 						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -126,7 +127,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="col-md-4 col-sm-6 footer-widget">
+			<div class="col-md-3 col-sm-6 footer-widget">
 				<div class="title">
 					<h3><span>Entre em Contato</span></h3>
 				</div>
@@ -167,11 +168,12 @@
 
 				</ul>
 			</div>
-			<div class="col-md-2 col-sm-6 footer-widget">
-				<div class="title">
-					<!-- <h3><span>Quick Links</span></h3> -->
+			<div class="col-md-3 col-sm-6 footer-widget">
+			<div class="about-widget">
+					<p>Responsável Técnico: <br>
+					<span class="sbold"><b>Dr. Ivan Fontenele Gomes</b><br>
+					</span>CNPJ: <b>22.575.063/0001-09</b></p>
 				</div>
-
 			</div>
 		</div>
 	</div>
@@ -183,7 +185,7 @@
 			<p>Copyright © DigitalRad 2016. Todos os Direitos Reservados.</p>
 		</div>
 		<div class="pull-right">
-			<p>Desenvolvimento: AzevedoDev</p>
+			<p>Desenvolvimento: <%= link_to "AzevedoDev", "http://www.azevedodev.com.br", :target => "_blank" %></p>
 		</div>
 	</div>
 </section>
