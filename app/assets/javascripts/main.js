@@ -30,6 +30,24 @@
 
 "use strict"; // Start of use strict
 
+// 14. mobileNavToggler
+function mobileNavToggler () {
+	if ($('.nav-holder').length) {
+		$('.nav-holder .nav-header .menu-expander button').on('click', function () {
+			$('.nav-holder .nav-footer').slideToggle();
+			return false;
+		});
+		$('.nav-holder li.has-submenu').children('a').append(function () {
+			return '<button class="dropdown-expander"><i class="fa fa-bars"></i></button>';
+		});
+		$('.nav-holder .nav-footer .dropdown-expander').on('click', function () {
+			$(this).parent().parent().children('.submenu').slideToggle();
+			return false;
+		});
+
+	}
+}
+
 // 1. revolutionSliderActiver
 function revolutionSliderActiver () {
 	if ($('.rev_slider_wrapper #slider1').length) {
@@ -278,23 +296,7 @@ function typed () {
 	    });
     };
 }
-// 14. mobileNavToggler
-function mobileNavToggler () {
-	if ($('.nav-holder').length) {
-		$('.nav-holder .nav-header .menu-expander button').on('click', function () {
-			$('.nav-holder .nav-footer').slideToggle();
-			return false;
-		});
-		$('.nav-holder li.has-submenu').children('a').append(function () {
-			return '<button class="dropdown-expander"><i class="fa fa-bars"></i></button>';
-		});
-		$('.nav-holder .nav-footer .dropdown-expander').on('click', function () {
-			$(this).parent().parent().children('.submenu').slideToggle();
-			return false;
-		});
 
-	}
-}
 
 
 // 15. testimonialCarousel
@@ -436,6 +438,7 @@ function thmSpinner () {
 // instance of fuction while Document ready event
 jQuery(document).on('ready', function () {
 	(function ($) {
+		mobileNavToggler();
 		revolutionSliderActiver();
 		accrodion();
 		selectMenu();
@@ -444,7 +447,6 @@ jQuery(document).on('ready', function () {
 		fleetGallery();
 		GalleryFancyboxActivator();
 		typed();
-		mobileNavToggler();
 		serviceCarousel();
 		testimonialCarousel();
 		testimonialsCarosuleTwo();
