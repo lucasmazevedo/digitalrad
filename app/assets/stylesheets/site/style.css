@@ -685,8 +685,13 @@ li {
    ============================== */
 
 .thm-banner-wrapper .caption-h1 {
-  font-size: 45px;
-  line-height: 62px;
+  width: 550px;
+  height: auto;
+  text-align: left;
+  white-space: normal;
+  word-wrap: break-word;
+  font-size: 35px;
+  line-height: 35px;
   font-weight: 700;
   text-transform: uppercase;
   color: #fff;
@@ -2027,18 +2032,18 @@ li {
   border: 2px solid #FFFFFF;
 }
 .about-info-box .bulleted-list {
-  margin-top: 20px;
-  margin-bottom: 25px;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 .about-info-box .bulleted-list li {
   color: #F36639;
-  font-size: 16px;
+  font-size: 14px;
   text-transform: uppercase;
   font-weight: bold;
 }
 .about-info-box .bulleted-list li .fa {
   margin-right: 5px;
-  line-height: 40px;
+  line-height: 25px;
 }
 
 
